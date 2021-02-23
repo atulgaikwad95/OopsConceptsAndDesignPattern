@@ -1,0 +1,8 @@
+﻿Pune 
+20000
+Mumbai
+54322
+Rajastan
+456789
+Delhi
+100000
