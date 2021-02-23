@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Mail;
 
 namespace CreationalDesignPatterns
 {
@@ -7,8 +8,7 @@ namespace CreationalDesignPatterns
         Rectangle,
         Square
     }
-   
-
+  
      public class Point
     {
         private int x;
@@ -54,8 +54,11 @@ namespace CreationalDesignPatterns
 
 
             //Inner Factory (Changes made in FactoryDemo class)
-            var innerFactory = FactoryDemo.AreaFactory.AreaSquare(3, 5);
-            Console.WriteLine(innerFactory);
+            /*   var innerFactory = FactoryDemo.AreaFactory.AreaSquare(3, 5);
+               Console.WriteLine(innerFactory);*/
+
+            SmtpClient client = new SmtpClient("hello.com");
+            client.Send(new MailMessage());
 
         }
     }
